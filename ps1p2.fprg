@@ -1,0 +1,28 @@
+<?xml version="1.0"?>
+<flowgorithm fileversion="2.11">
+    <attributes>
+        <attribute name="name" value=""/>
+        <attribute name="authors" value="jazmi"/>
+        <attribute name="about" value=""/>
+        <attribute name="saved" value="2022-02-17 02:07:39 PM"/>
+        <attribute name="created" value="amF6bWk7REVTS1RPUC1UTkRJSkhOOzIwMjItMDItMTc7MTE6NDk6MDYgQU07MjkxNQ=="/>
+        <attribute name="edited" value="amF6bWk7REVTS1RPUC1UTkRJSkhOOzIwMjItMDItMTc7MDI6MDc6MzkgUE07MTszMDM4"/>
+    </attributes>
+    <function name="Main" type="None" variable="">
+        <parameters/>
+        <body>
+            <declare name="ex1" type="Real" array="False" size=""/>
+            <declare name="ex2" type="Real" array="False" size=""/>
+            <declare name="avgscore" type="Real" array="False" size=""/>
+            <declare name="lastname" type="String" array="False" size=""/>
+            <output expression="&quot;Enter you lastname&quot;" newline="True"/>
+            <input variable="lastname"/>
+            <output expression="&quot;Enter exam one score&quot;" newline="True"/>
+            <input variable="ex1"/>
+            <output expression="&quot;Enter score two&quot;" newline="True"/>
+            <input variable="ex2"/>
+            <assign variable="avgscore" expression="(ex1+ex2)/2"/>
+            <output expression="lastname&amp; &quot;,&quot; &amp; avgscore" newline="True"/>
+        </body>
+    </function>
+</flowgorithm>
