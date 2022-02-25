@@ -1,0 +1,27 @@
+<?xml version="1.0"?>
+<flowgorithm fileversion="2.11">
+    <attributes>
+        <attribute name="name" value=""/>
+        <attribute name="authors" value="jazmin"/>
+        <attribute name="about" value=""/>
+        <attribute name="saved" value="2022-02-24 12:39:59 PM"/>
+        <attribute name="created" value="amF6bWk7REVTS1RPUC1UTkRJSkhOOzIwMjItMDItMjI7MDQ6MTI6NTEgUE07MjkxOA=="/>
+        <attribute name="edited" value="amF6bWk7REVTS1RPUC1UTkRJSkhOOzIwMjItMDItMjQ7MTI6Mzk6NTkgUE07MzszMDQ2"/>
+    </attributes>
+    <function name="Main" type="None" variable="">
+        <parameters/>
+        <body>
+            <declare name="Priceofitem" type="Real" array="False" size=""/>
+            <declare name="discountpercent" type="Real" array="False" size=""/>
+            <declare name="discount" type="Real" array="False" size=""/>
+            <output expression="&quot;Enter the price of item&quot;" newline="True"/>
+            <input variable="Priceofitem"/>
+            <output expression="&quot;enter the discount percent &quot;" newline="True"/>
+            <input variable="discountpercent"/>
+            <assign variable="discount" expression="Priceofitem * discountpercent"/>
+            <assign variable="discountpercent" expression="priceofitem - discount"/>
+            <output expression="&quot;discount is &quot; &amp; discount" newline="True"/>
+            <output expression="&quot;discount price is  &quot; &amp; Priceofitem - discount" newline="True"/>
+        </body>
+    </function>
+</flowgorithm>

@@ -1,0 +1,25 @@
+<?xml version="1.0"?>
+<flowgorithm fileversion="2.11">
+    <attributes>
+        <attribute name="name" value=""/>
+        <attribute name="authors" value="jazmi"/>
+        <attribute name="about" value=""/>
+        <attribute name="saved" value="2022-02-24 11:05:24 AM"/>
+        <attribute name="created" value="amF6bWk7REVTS1RPUC1UTkRJSkhOOzIwMjItMDItMjE7MTE6Mjc6MzYgUE07MjkyNA=="/>
+        <attribute name="edited" value="amF6bWk7REVTS1RPUC1UTkRJSkhOOzIwMjItMDItMjQ7MTE6MDU6MjQgQU07NjszMDE4"/>
+    </attributes>
+    <function name="Main" type="None" variable="">
+        <parameters/>
+        <body>
+            <declare name="quantity" type="Real" array="False" size=""/>
+            <declare name="priceperunit" type="Real" array="False" size=""/>
+            <declare name="extended" type="Real" array="False" size=""/>
+            <output expression="&quot;enter a floating point number&quot;" newline="True"/>
+            <input variable="quantity"/>
+            <output expression="&quot;Enter the float&quot;" newline="True"/>
+            <input variable="priceperunit"/>
+            <assign variable="extended" expression="(quantity * priceperunit)"/>
+            <output expression="&quot;extended is &quot; &amp; extended" newline="True"/>
+        </body>
+    </function>
+</flowgorithm>

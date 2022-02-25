@@ -1,0 +1,28 @@
+<?xml version="1.0"?>
+<flowgorithm fileversion="2.11">
+    <attributes>
+        <attribute name="name" value=""/>
+        <attribute name="authors" value="jazmi"/>
+        <attribute name="about" value=""/>
+        <attribute name="saved" value="2022-02-24 05:49:56 PM"/>
+        <attribute name="created" value="amF6bWk7REVTS1RPUC1UTkRJSkhOOzIwMjItMDItMjE7MTE6MTE6MjAgUE07MjkxMA=="/>
+        <attribute name="edited" value="amF6bWk7REVTS1RPUC1UTkRJSkhOOzIwMjItMDItMjQ7MDU6NDk6NTYgUE07NTszMDQ4"/>
+    </attributes>
+    <function name="Main" type="None" variable="">
+        <parameters/>
+        <body>
+            <declare name="hours" type="Real" array="False" size=""/>
+            <declare name="rate" type="Real" array="False" size=""/>
+            <declare name="grosspay" type="Real" array="False" size=""/>
+            <declare name="lastname" type="String" array="False" size=""/>
+            <output expression="&quot;Enter your lastname &quot;" newline="True"/>
+            <input variable="lastname"/>
+            <output expression="&quot;Enter hours&quot;" newline="True"/>
+            <input variable="hours"/>
+            <output expression="&quot;Enter pay rate&quot;" newline="True"/>
+            <input variable="rate"/>
+            <assign variable="grosspay" expression="hours * rate"/>
+            <output expression="lastname &amp; &quot;, &quot; &amp; grosspay" newline="True"/>
+        </body>
+    </function>
+</flowgorithm>
