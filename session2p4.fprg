@@ -1,0 +1,36 @@
+<?xml version="1.0"?>
+<flowgorithm fileversion="2.11">
+    <attributes>
+        <attribute name="name" value=""/>
+        <attribute name="authors" value="jazmi"/>
+        <attribute name="about" value=""/>
+        <attribute name="saved" value="2022-03-04 11:18:44 AM"/>
+        <attribute name="created" value="amF6bWk7REVTS1RPUC1UTkRJSkhOOzIwMjItMDMtMDE7MDM6MzE6MDEgUE07MjkxMQ=="/>
+        <attribute name="edited" value="amF6bWk7REVTS1RPUC1UTkRJSkhOOzIwMjItMDMtMDQ7MTE6MTg6NDQgQU07NDszMDIx"/>
+    </attributes>
+    <function name="Main" type="None" variable="">
+        <parameters/>
+        <body>
+            <declare name="nameapp" type="String" array="False" size=""/>
+            <declare name="app" type="Real" array="False" size=""/>
+            <declare name="wc" type="Real" array="False" size=""/>
+            <declare name="total" type="Real" array="False" size=""/>
+            <output expression="&quot;enter the name of applaince&quot;" newline="True"/>
+            <input variable="nameapp"/>
+            <output expression="&quot;enter the cost of an applaince&quot;" newline="True"/>
+            <input variable="app"/>
+            <if expression="app&gt;1000">
+                <then>
+                    <assign variable="wc" expression="app * 0.10"/>
+                </then>
+                <else>
+                    <assign variable="wc" expression="app * 0.05"/>
+                </else>
+            </if>
+            <assign variable="total" expression="app + wc"/>
+            <output expression="&quot; appliance total is $&quot; &amp;total" newline="True"/>
+            <output expression="&quot;cost of appliance $&quot; &amp;app" newline="True"/>
+            <output expression="&quot;cost of warrantee $&quot; &amp;wc" newline="True"/>
+        </body>
+    </function>
+</flowgorithm>

@@ -1,0 +1,50 @@
+<?xml version="1.0"?>
+<flowgorithm fileversion="2.11">
+    <attributes>
+        <attribute name="name" value=""/>
+        <attribute name="authors" value="jazmi"/>
+        <attribute name="about" value=""/>
+        <attribute name="saved" value="2022-03-04 12:03:30 PM"/>
+        <attribute name="created" value="amF6bWk7REVTS1RPUC1UTkRJSkhOOzIwMjItMDMtMDE7MDE6NTI6MjkgUE07MjkyMg=="/>
+        <attribute name="edited" value="amF6bWk7REVTS1RPUC1UTkRJSkhOOzIwMjItMDMtMDQ7MTI6MDM6MzAgUE07NTszMDI3"/>
+    </attributes>
+    <function name="Main" type="None" variable="">
+        <parameters/>
+        <body>
+            <declare name="perbook" type="Real" array="False" size=""/>
+            <declare name="cost" type="Integer" array="False" size=""/>
+            <declare name="total" type="Real" array="False" size=""/>
+            <declare name="order" type="Real" array="False" size=""/>
+            <declare name="sp" type="Real" array="False" size=""/>
+            <output expression="&quot;enter the number of books to order&quot;" newline="True"/>
+            <input variable="perbook"/>
+            <output expression="&quot;enter the cost per book&quot;" newline="True"/>
+            <input variable="cost"/>
+            <assign variable="total" expression="computetotal(perbook,cost)"/>
+            <if expression="total&gt;50">
+                <then>
+                    <assign variable="sp" expression="0.00"/>
+                </then>
+                <else>
+                    <assign variable="sp" expression="25.00"/>
+                </else>
+            </if>
+            <assign variable="order" expression="total + sp"/>
+            <output expression="&quot;number per book:   &quot; &amp; perbook" newline="True"/>
+            <output expression="&quot;cost per book:    $&quot; &amp; cost" newline="True"/>
+            <output expression="&quot;ordered total:    $&quot; &amp; total" newline="True"/>
+            <output expression="&quot;shipping:    $&quot; &amp; sp" newline="True"/>
+            <output expression="&quot;total order:    $&quot; &amp; order" newline="True"/>
+        </body>
+    </function>
+    <function name="computetotal" type="Real" variable="total">
+        <parameters>
+            <parameter name="perbook" type="Real" array="False"/>
+            <parameter name="cost" type="Real" array="False"/>
+        </parameters>
+        <body>
+            <declare name="total" type="Real" array="False" size=""/>
+            <assign variable="total" expression="perbook * cost"/>
+        </body>
+    </function>
+</flowgorithm>
