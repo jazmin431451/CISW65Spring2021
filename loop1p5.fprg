@@ -1,0 +1,56 @@
+<?xml version="1.0"?>
+<flowgorithm fileversion="2.11">
+    <attributes>
+        <attribute name="name" value=""/>
+        <attribute name="authors" value="jazmi"/>
+        <attribute name="about" value=""/>
+        <attribute name="saved" value="2022-03-24 11:46:41 AM"/>
+        <attribute name="created" value="amF6bWk7REVTS1RPUC1UTkRJSkhOOzIwMjItMDMtMjA7MDU6MDI6NDcgUE07MjkyMg=="/>
+        <attribute name="edited" value="amF6bWk7REVTS1RPUC1UTkRJSkhOOzIwMjItMDMtMjI7MDM6MDQ6MjEgUE07NztqYXptaTtERVNLVE9QLVRORElKSE47MjAyMi0wMy0xNzswNDozNzozMyBQTTtsb29wMXA0LmZwcmc7NzIxMA=="/>
+        <attribute name="edited" value="amF6bWk7REVTS1RPUC1UTkRJSkhOOzIwMjItMDMtMjQ7MTE6NDY6NDEgQU07MzszMDIw"/>
+    </attributes>
+    <function name="Main" type="None" variable="">
+        <parameters/>
+        <body>
+            <declare name="response" type="String" array="False" size=""/>
+            <declare name="counter" type="Integer" array="False" size=""/>
+            <declare name="qty" type="Integer" array="False" size=""/>
+            <declare name="priceitem" type="Real" array="False" size=""/>
+            <declare name="extprice" type="Real" array="False" size=""/>
+            <declare name="discount" type="Real" array="False" size=""/>
+            <declare name="discountamount" type="Real" array="False" size=""/>
+            <declare name="total" type="Real" array="False" size=""/>
+            <assign variable="counter" expression="0"/>
+            <assign variable="total" expression="0"/>
+            <output expression="&quot;do you want to compute you program &quot;" newline="True"/>
+            <input variable="response"/>
+            <while expression="response == &quot;yes&quot;">
+                <assign variable="counter" expression="counter + 1"/>
+                <output expression="&quot;how many quantity&quot;" newline="True"/>
+                <input variable="qty"/>
+                <output expression="&quot;price of the item&quot;" newline="True"/>
+                <input variable="priceitem"/>
+                <assign variable="extprice" expression="qty * priceitem"/>
+                <if expression="extprice &gt; 10000.00">
+                    <then>
+                        <assign variable="extprice" expression="qty * priceitem"/>
+                        <assign variable="discountamount" expression="0.10"/>
+                        <output expression="&quot;extended price of an item $&quot;  &amp; extprice" newline="True"/>
+                    </then>
+                    <else>
+                        <assign variable="extprice" expression="qty * priceitem"/>
+                        <assign variable="discountamount" expression="0.25"/>
+                        <output expression="&quot;extended price of an item $&quot;  &amp; extprice" newline="True"/>
+                    </else>
+                </if>
+                <assign variable="total" expression="extprice - discountamount"/>
+                <output expression="extprice &amp; &quot; has pay of $&quot;&amp; discountamount" newline="True"/>
+                <output expression="&quot;do you want to compute you program &quot;" newline="True"/>
+                <input variable="response"/>
+            </while>
+            <assign variable="discountamount" expression="total / counter"/>
+            <output expression="&quot;Sum of discount amount Pay is $&quot;&amp;discountamount" newline="True"/>
+            <output expression="&quot;Number of quantity &quot; &amp; counter" newline="True"/>
+        </body>
+    </function>
+</flowgorithm>

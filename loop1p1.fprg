@@ -1,0 +1,26 @@
+<?xml version="1.0"?>
+<flowgorithm fileversion="2.11">
+    <attributes>
+        <attribute name="name" value=""/>
+        <attribute name="authors" value="jazmi"/>
+        <attribute name="about" value=""/>
+        <attribute name="saved" value="2022-03-15 11:11:29 PM"/>
+        <attribute name="created" value="amF6bWk7REVTS1RPUC1UTkRJSkhOOzIwMjItMDMtMTU7MTA6NTQ6NTUgUE07MjkyOA=="/>
+        <attribute name="edited" value="amF6bWk7REVTS1RPUC1UTkRJSkhOOzIwMjItMDMtMTU7MTE6MTE6MjkgUE07MTszMDMx"/>
+    </attributes>
+    <function name="Main" type="None" variable="">
+        <parameters/>
+        <body>
+            <declare name="startv" type="Integer" array="False" size=""/>
+            <declare name="stopv" type="Integer" array="False" size=""/>
+            <declare name="incrv" type="Integer" array="False" size=""/>
+            <assign variable="startv" expression="1"/>
+            <assign variable="stopv" expression="25"/>
+            <assign variable="incrv" expression="2"/>
+            <while expression="startv &lt;= stopv">
+                <output expression="&quot;loop - start value&quot; &amp; startv" newline="True"/>
+                <assign variable="startv" expression="startv + incrv"/>
+            </while>
+        </body>
+    </function>
+</flowgorithm>
