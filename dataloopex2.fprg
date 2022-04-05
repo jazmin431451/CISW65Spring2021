@@ -1,0 +1,33 @@
+<?xml version="1.0"?>
+<flowgorithm fileversion="2.11">
+    <attributes>
+        <attribute name="name" value=""/>
+        <attribute name="authors" value="jazmi"/>
+        <attribute name="about" value=""/>
+        <attribute name="saved" value="2022-04-05 10:20:55 AM"/>
+        <attribute name="created" value="amF6bWk7REVTS1RPUC1UTkRJSkhOOzIwMjItMDQtMDQ7MDg6MTQ6NDUgQU07MjkxNA=="/>
+        <attribute name="edited" value="amF6bWk7REVTS1RPUC1UTkRJSkhOOzIwMjItMDQtMDU7MTA6MjA6NTUgQU07MzszMDE2"/>
+    </attributes>
+    <function name="Main" type="None" variable="">
+        <parameters/>
+        <body>
+            <declare name="count" type="Real" array="False" size=""/>
+            <declare name="n1" type="Integer" array="False" size=""/>
+            <declare name="n2" type="Integer" array="False" size=""/>
+            <declare name="i" type="Real" array="False" size=""/>
+            <declare name="sum" type="Real" array="False" size=""/>
+            <output expression="&quot;enter count of terms: &quot;" newline="True"/>
+            <input variable="count"/>
+            <assign variable="n1" expression="0"/>
+            <assign variable="n2" expression="1"/>
+            <assign variable="i" expression="0"/>
+            <for variable="i" start="1" end="count + 1" direction="inc" step="1">
+                <output expression="n1" newline="True"/>
+                <assign variable="sum" expression="n1 + n2"/>
+                <assign variable="n1" expression="n2"/>
+                <assign variable="n2" expression="sum"/>
+                <assign variable="i" expression="i + 1"/>
+            </for>
+        </body>
+    </function>
+</flowgorithm>
