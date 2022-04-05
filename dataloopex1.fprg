@@ -1,0 +1,40 @@
+<?xml version="1.0"?>
+<flowgorithm fileversion="2.11">
+    <attributes>
+        <attribute name="name" value=""/>
+        <attribute name="authors" value="jazmi"/>
+        <attribute name="about" value=""/>
+        <attribute name="saved" value="2022-04-02 02:02:18 PM"/>
+        <attribute name="created" value="amF6bWk7REVTS1RPUC1UTkRJSkhOOzIwMjItMDQtMDI7MDE6MjQ6NTggUE07MjkyNQ=="/>
+        <attribute name="edited" value="amF6bWk7REVTS1RPUC1UTkRJSkhOOzIwMjItMDQtMDI7MDI6MDI6MTggUE07MTszMDI2"/>
+    </attributes>
+    <function name="Main" type="None" variable="">
+        <parameters/>
+        <body>
+            <declare name="p" type="Real" array="False" size=""/>
+            <declare name="t" type="Real" array="False" size=""/>
+            <declare name="r" type="Real" array="False" size=""/>
+            <declare name="y" type="Integer" array="False" size=""/>
+            <declare name="i" type="Real" array="False" size=""/>
+            <declare name="nb" type="Real" array="False" size=""/>
+            <assign variable="t" expression="0"/>
+            <output expression="&quot;enter principle amount&quot;" newline="True"/>
+            <input variable="p"/>
+            <output expression="&quot;enter interest rate in decimal form&quot;" newline="True"/>
+            <input variable="r"/>
+            <output expression="&quot;starting principle &quot; &amp; p" newline="True"/>
+            <output expression="&quot;interest rate &quot; &amp; r" newline="True"/>
+            <for variable="y" start="1" end="5" direction="inc" step="1">
+                <assign variable="i" expression="p * r"/>
+                <assign variable="nb" expression="i + p"/>
+                <assign variable="t" expression="t+i"/>
+                <output expression="&quot;year:  &quot; &amp; y" newline="True"/>
+                <output expression="&quot;principle  : &quot; &amp; p" newline="True"/>
+                <output expression="&quot;interest earned: &quot; &amp; i" newline="True"/>
+                <output expression="&quot;end of year balance: &quot; &amp; nb" newline="True"/>
+                <assign variable="p" expression="nb"/>
+            </for>
+            <output expression="&quot;total interest earn &quot; &amp; t" newline="True"/>
+        </body>
+    </function>
+</flowgorithm>
