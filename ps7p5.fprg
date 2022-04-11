@@ -1,0 +1,53 @@
+<?xml version="1.0"?>
+<flowgorithm fileversion="2.11">
+    <attributes>
+        <attribute name="name" value=""/>
+        <attribute name="authors" value="jazmi"/>
+        <attribute name="about" value=""/>
+        <attribute name="saved" value="2022-04-10 08:10:52 PM"/>
+        <attribute name="created" value="amF6bWk7REVTS1RPUC1UTkRJSkhOOzIwMjItMDQtMDY7MDE6NDc6MzggUE07MjkzMg=="/>
+        <attribute name="edited" value="amF6bWk7REVTS1RPUC1UTkRJSkhOOzIwMjItMDQtMTA7MDg6MTA6NTIgUE07MzszMDMw"/>
+    </attributes>
+    <function name="Main" type="None" variable="">
+        <parameters/>
+        <body>
+            <declare name="lastname" type="String" array="False" size=""/>
+            <declare name="credithours" type="Real" array="False" size=""/>
+            <declare name="totalcharge" type="Real" array="False" size=""/>
+            <declare name="districtcode" type="String" array="False" size=""/>
+            <declare name="tuitionowed" type="Integer" array="False" size=""/>
+            <output expression="&quot;enter student lastname &quot;" newline="True"/>
+            <input variable="lastname"/>
+            <output expression="&quot;enter the district code I or O&quot;" newline="True"/>
+            <input variable="districtcode"/>
+            <output expression="&quot;enter credit hours&quot;" newline="True"/>
+            <input variable="credithours"/>
+            <call expression="comptuitionowed(credithours,districtcode)"/>
+            <assign variable="totalcharge" expression="comptuitionowed(credithours,districtcode)"/>
+            <output expression="&quot;student last name is &quot; &amp; lastname" newline="True"/>
+            <output expression="&quot;Student Owes Tuition Charge is $&quot; &amp; totalcharge" newline="True"/>
+        </body>
+    </function>
+    <function name="comptuitionowed" type="Real" variable="tuitionowed">
+        <parameters>
+            <parameter name="credithours" type="Real" array="False"/>
+            <parameter name="districtcode" type="String" array="False"/>
+        </parameters>
+        <body>
+            <declare name="tuitionowed" type="Real" array="False" size=""/>
+            <if expression="districtcode == &quot;I&quot;">
+                <then>
+                    <assign variable="tuitionowed" expression="credithours * 250"/>
+                </then>
+                <else>
+                    <if expression="districtcode == &quot;O&quot;">
+                        <then>
+                            <assign variable="tuitionowed" expression="credithours * 550"/>
+                        </then>
+                        <else/>
+                    </if>
+                </else>
+            </if>
+        </body>
+    </function>
+</flowgorithm>

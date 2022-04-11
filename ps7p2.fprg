@@ -1,0 +1,40 @@
+<?xml version="1.0"?>
+<flowgorithm fileversion="2.11">
+    <attributes>
+        <attribute name="name" value=""/>
+        <attribute name="authors" value="jazmi"/>
+        <attribute name="about" value=""/>
+        <attribute name="saved" value="2022-04-07 06:51:26 PM"/>
+        <attribute name="created" value="amF6bWk7REVTS1RPUC1UTkRJSkhOOzIwMjItMDQtMDI7MTA6MzU6NDQgUE07MjkyMg=="/>
+        <attribute name="edited" value="amF6bWk7REVTS1RPUC1UTkRJSkhOOzIwMjItMDQtMDc7MDY6NTE6MjYgUE07MjszMDM5"/>
+    </attributes>
+    <function name="Main" type="None" variable="">
+        <parameters/>
+        <body>
+            <declare name="hits" type="Real" array="False" size=""/>
+            <declare name="bats" type="Real" array="False" size=""/>
+            <declare name="avg" type="Real" array="False" size=""/>
+            <declare name="lastname" type="String" array="False" size=""/>
+            <output expression="&quot;Enter the players lastname&quot;" newline="True"/>
+            <input variable="lastname"/>
+            <output expression="&quot;Enter the number of hits&quot;" newline="True"/>
+            <input variable="hits"/>
+            <output expression="&quot;Enter the players bats&quot;" newline="True"/>
+            <input variable="bats"/>
+            <call expression="compavg(hits,bats)"/>
+            <assign variable="avg" expression="compavg(hits,bats)"/>
+            <output expression="&quot;player name is &quot; &amp; lastname" newline="True"/>
+            <output expression="&quot;batting average is &quot; &amp; avg" newline="True"/>
+        </body>
+    </function>
+    <function name="compavg" type="Real" variable="avg">
+        <parameters>
+            <parameter name="hits" type="Real" array="False"/>
+            <parameter name="bats" type="Real" array="False"/>
+        </parameters>
+        <body>
+            <declare name="avg" type="Real" array="False" size=""/>
+            <assign variable="avg" expression="hits / bats"/>
+        </body>
+    </function>
+</flowgorithm>

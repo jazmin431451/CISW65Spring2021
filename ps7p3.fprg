@@ -1,0 +1,53 @@
+<?xml version="1.0"?>
+<flowgorithm fileversion="2.11">
+    <attributes>
+        <attribute name="name" value=""/>
+        <attribute name="authors" value="jazmi"/>
+        <attribute name="about" value=""/>
+        <attribute name="saved" value="2022-04-07 06:51:49 PM"/>
+        <attribute name="created" value="amF6bWk7REVTS1RPUC1UTkRJSkhOOzIwMjItMDQtMDI7MTA6NTM6MjMgUE07MjkxOQ=="/>
+        <attribute name="edited" value="amF6bWk7REVTS1RPUC1UTkRJSkhOOzIwMjItMDQtMDc7MDY6NTE6NDkgUE07MjszMDQ0"/>
+    </attributes>
+    <function name="Main" type="None" variable="">
+        <parameters/>
+        <body>
+            <declare name="city" type="String" array="False" size=""/>
+            <declare name="milies" type="Real" array="False" size=""/>
+            <declare name="gallons" type="Real" array="False" size=""/>
+            <declare name="miliespergallon" type="Real" array="False" size=""/>
+            <declare name="cost" type="Real" array="False" size=""/>
+            <output expression="&quot;enter the destination city&quot;" newline="True"/>
+            <input variable="city"/>
+            <output expression="&quot;enter the milies travelled&quot;" newline="True"/>
+            <input variable="milies"/>
+            <output expression="&quot;enter gallons&quot;" newline="True"/>
+            <input variable="gallons"/>
+            <call expression="compmiliespergallon(milies,gallons)"/>
+            <assign variable="miliespergallon" expression="compmiliespergallon(milies,gallons)"/>
+            <call expression="compcost(gallons)"/>
+            <assign variable="cost" expression="compcost(gallons)"/>
+            <output expression="&quot;destination city is  &quot; &amp; city" newline="True"/>
+            <output expression="&quot;mpg is &quot; &amp; milies" newline="True"/>
+            <output expression="&quot;cost of gallons is &quot; &amp; cost" newline="True"/>
+        </body>
+    </function>
+    <function name="compcost" type="Real" variable="cost">
+        <parameters>
+            <parameter name="gallons" type="Real" array="False"/>
+        </parameters>
+        <body>
+            <declare name="cost" type="Real" array="False" size=""/>
+            <assign variable="cost" expression="gallons * 2.50"/>
+        </body>
+    </function>
+    <function name="compmiliespergallon" type="Real" variable="miliespergallon">
+        <parameters>
+            <parameter name="milies" type="Real" array="False"/>
+            <parameter name="gallons" type="Real" array="False"/>
+        </parameters>
+        <body>
+            <declare name="miliespergallon" type="Real" array="False" size=""/>
+            <assign variable="miliespergallon" expression="milies / gallons"/>
+        </body>
+    </function>
+</flowgorithm>
